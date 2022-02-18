@@ -1,0 +1,59 @@
+<p>sports-homepage works!</p>
+
+<div class="container">
+    <table>
+        <h3>Tennis</h3>
+        <tr>
+            <th>Publication Date</th>
+            <th>Winner</th>
+            <th>Loser</th>
+            <th>No. of Sets</th>
+            <th>Tournament</th>
+        </tr>
+        <tr *ngFor="let tennis of tennisData">
+            <td>{{tennis.publicationDate}}</td>
+            <td>{{tennis.winner}}</td>
+            <td>{{tennis.looser}}</td>
+            <td>{{tennis.numberOfSets}}</td>
+            <td>{{tennis.tournament}}</td>
+        </tr>
+    </table>
+</div>
+
+<div class="container">
+    <table>
+        <h3>F1 Racing</h3>
+        <tr>
+            <th>Publication Date</th>
+            <th>Winner</th>
+            <th>Seconds</th>
+            <th>Tournament</th>
+        </tr>
+        <tr *ngFor="let f1 of f1Data">
+            <td>{{f1.publicationDate}}</td>
+            <td>{{f1.winner}}</td>
+            <td>{{f1.seconds}}</td>
+            <td>{{f1.tournament}}</td>
+        </tr>
+    </table>
+</div>
+
+<div class="container">
+    <table>
+        <h3>NBA</h3>
+        <tr>
+            <th>Publication Date</th>
+            <th>Loser</th>
+            <th>Game Number</th>
+            <th>MVP</th>
+            <th>Tournament</th>
+        </tr>
+        <tr *ngFor="let nba of nbaData">
+            <td>{{nba.publicationDate}}</td>
+            <td>{{nba.looser}}</td>
+            <td>{{nba.gameNumber}}</td>
+            <td>{{nba.mvp}}</td>
+            <td>{{nba.tournament}}</td>
+        </tr>
+    </table>
+</div>
