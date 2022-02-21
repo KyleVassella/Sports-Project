@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { ITennis } from '../interfaces/itennis';
-import { IF1 } from '../interfaces/if1';
+import { ITennis } from 'src/app/interfaces/sports';
+
 
 @Pipe({
   name: 'searchFilterTennis',

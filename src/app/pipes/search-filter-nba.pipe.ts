@@ -1,5 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { INba } from '../interfaces/inba';
+import { INba } from 'src/app/interfaces/sports';
+
 
 @Pipe({
   name: 'searchFilterNba'

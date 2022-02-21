@@ -12,7 +12,7 @@ export class SportsService {
 
   sportsUrl: string = 'https://ancient-wood-1161.getsandbox.com:443/results'
 
-  retrieveSports(): Observable<any> {
+  getSports(): Observable<any> {
     return this.http.post(this.sportsUrl, {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'

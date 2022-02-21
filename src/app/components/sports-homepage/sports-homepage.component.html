@@ -2,7 +2,11 @@
 
 <div class="container">
     <table>
-        <h3>Tennis</h3>
+        <div>
+            <h3>Tennis</h3>
+            <input type="text" [(ngModel)]="searchValueTennis" placeholder="Tennis filter">
+        </div>
+        <br>
         <tr>
             <th>Publication Date</th>
             <th>Winner</th>
@@ -10,7 +14,8 @@
             <th>No. of Sets</th>
             <th>Tournament</th>
         </tr>
-        <tr *ngFor="let tennis of tennisData">
+        <!-- <tr *ngFor="let tennis of filteredTennisData | searchFilterTennis:searchValueTennis" (mousemove)="onMouseMove()"> -->
+        <tr *ngFor="let tennis of filteredTennisData">
             <td>{{tennis.publicationDate}}</td>
             <td>{{tennis.winner}}</td>
             <td>{{tennis.looser}}</td>
@@ -20,16 +25,22 @@
     </table>
 </div>
 
+<br>
+
 <div class="container">
     <table>
-        <h3>F1 Racing</h3>
+        <div>
+            <h3>F1 Racing</h3>
+            <input type="text" [(ngModel)]="searchValueF1" placeholder="F1 filter">
+        </div>
+        <br>
         <tr>
             <th>Publication Date</th>
             <th>Winner</th>
             <th>Seconds</th>
             <th>Tournament</th>
         </tr>
-        <tr *ngFor="let f1 of f1Data">
+        <tr *ngFor="let f1 of filteredF1Data">
             <td>{{f1.publicationDate}}</td>
             <td>{{f1.winner}}</td>
             <td>{{f1.seconds}}</td>
@@ -38,18 +49,29 @@
     </table>
 </div>
 
+<br>
+
 <div class="container">
     <table>
-        <h3>NBA</h3>
+        <div>
+            <h3>NBA</h3>
+            <input type="text" [(ngModel)]="searchValueNba" placeholder="NBA filter">
+        </div>
+
+        <br>
+
         <tr>
             <th>Publication Date</th>
+            <th>Winner</th>
             <th>Loser</th>
             <th>Game Number</th>
             <th>MVP</th>
             <th>Tournament</th>
         </tr>
-        <tr *ngFor="let nba of nbaData">
+        <!-- <tr *ngFor="let nba of nbaData | searchFilterNba:searchValueNba"> -->
+        <tr *ngFor="let nba of filteredNbaData">
             <td>{{nba.publicationDate}}</td>
+            <td>{{nba.winner}}</td>
             <td>{{nba.looser}}</td>
             <td>{{nba.gameNumber}}</td>
             <td>{{nba.mvp}}</td>
