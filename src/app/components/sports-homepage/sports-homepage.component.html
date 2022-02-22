@@ -4,7 +4,7 @@
     <table>
         <div>
             <h3>Tennis</h3>
-            <input type="text" [(ngModel)]="searchValueTennis" placeholder="Tennis filter">
+            <input type="text" [(ngModel)]="searchValueTennis" placeholder="Tennis filter" id="modelTennis">
         </div>
         <br>
         <tr>
@@ -31,7 +31,7 @@
     <table>
         <div>
             <h3>F1 Racing</h3>
-            <input type="text" [(ngModel)]="searchValueF1" placeholder="F1 filter">
+            <input type="text" [(ngModel)]="searchValueF1" placeholder="F1 filter" id="modelF1">
         </div>
         <br>
         <tr>
@@ -55,7 +55,7 @@
     <table>
         <div>
             <h3>NBA</h3>
-            <input type="text" [(ngModel)]="searchValueNba" placeholder="NBA filter">
+            <input type="text" [(ngModel)]="searchValueNba" placeholder="NBA filter" id="modelNba">
         </div>
 
         <br>
@@ -68,7 +68,6 @@
             <th>MVP</th>
             <th>Tournament</th>
         </tr>
-        <!-- <tr *ngFor="let nba of nbaData | searchFilterNba:searchValueNba"> -->
         <tr *ngFor="let nba of filteredNbaData">
             <td>{{nba.publicationDate}}</td>
             <td>{{nba.winner}}</td>

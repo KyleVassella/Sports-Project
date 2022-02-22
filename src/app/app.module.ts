@@ -10,16 +10,12 @@ import { SportsHomepageComponent } from './components/sports-homepage/sports-hom
 import { SportsService } from './services/sports.service';
 
 import { SearchFilterTennisPipe } from './pipes/search-filter-tennis.pipe';
-import { SearchFilterF1Pipe } from './pipes/search-filter-f1.pipe';
-import { SearchFilterNbaPipe } from './pipes/search-filter-nba.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     SportsHomepageComponent,
-    SearchFilterTennisPipe,
-    SearchFilterF1Pipe,
-    SearchFilterNbaPipe
+    SearchFilterTennisPipe
   ],
   imports: [
     BrowserModule,

@@ -18,11 +18,11 @@ export class SportsHomepageComponent implements OnInit {
   tennisData: ITennis[] = [];
   filteredTennisData: ITennis[] = [];
 
-  // ngModel backing field (tennis)
-  private _searchValueTennis: string;
   // searchValueTennis:string;
+  private _searchValueTennis: string; // ngModel backing field (tennis)
 
   // getter (tennis)
+  // because ngmodel is referencing a method rather than a property (so we can do more complex stuff), we need to have a getter to return the property value to the template. 
   get searchValueTennis(): string {
     return this._searchValueTennis;
   }
@@ -66,7 +66,6 @@ export class SportsHomepageComponent implements OnInit {
   }
 
   nbaData: INba[] = [];
-  // searchValueNba:string;
   private _searchValueNba: string;
   filteredNbaData: INba[] = [];
 
@@ -125,8 +124,8 @@ export class SportsHomepageComponent implements OnInit {
     );
   }
 
-  onMouseMove() {
-    // to show why impure pipes are bad, let's expose the mouse move event
-  }
+  // onMouseMove() {
+  //   // to show why impure pipes are bad, let's expose the mouse move event
+  // }
 
 }
